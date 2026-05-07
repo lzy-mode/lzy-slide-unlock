@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide Unlock Demo</title>
+    <link rel="stylesheet" href="../dist/style.css" />
+    <style>
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        background: #f4f6f8;
+      }
+
+      #app {
+        width: 100vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="module">
+      import { createApp, h } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+      import SlideUnlock from "../dist/index.mjs";
+
+      createApp({
+        render() {
+          return h(SlideUnlock, {
+            text: "滑动完成取货",
+            width: "100vw",
+            height: "50px",
+            bgColor: "#342234",
+            resetOnSuccess: true,
+            onSuccess: () => console.log("解锁成功")
+          });
+        }
+      }).mount("#app");
+    </script>
+  </body>
+</html>

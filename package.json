@@ -1,0 +1,41 @@
+{
+  "name": "lzy-slide-unlock",
+  "version": "1.0.0",
+  "description": "A Vue 3 slide-to-unlock component with configurable text, size and colors.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/style.css",
+    "./dist/style.css": "./dist/style.css",
+    "./src/style.css": "./src/style.css"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "demo": "python3 -m http.server 5173",
+    "pack:check": "npm pack --dry-run"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "slide",
+    "unlock",
+    "slider",
+    "component"
+  ],
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+}
